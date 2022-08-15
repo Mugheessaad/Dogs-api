@@ -1,0 +1,96 @@
+header{
+    background-color: rgb(100, 10, 203);
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#dog{
+    width: 10%;
+    
+}
+#bar{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div i{
+        font-size: 30px;
+        margin-left: 10px;
+}
+#input{
+    font-size: 20px;
+    width: 60%;
+    height: 6vh;
+}
+.btn{
+    size: 17px;
+    width: 18%;
+    margin: 5px;
+    height: 7vh;
+}
+#main{
+    display: flex;
+    background-color: #bf9ee3;
+    height: 70vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    background-image: url("images/images.jpg");
+}
+#main div{
+    margin: 10px;
+    background-color: rgb(117, 117, 186);
+    height: 25vh;
+    width: 25%;
+    font-size: 20px;
+    padding: 10px;
+}
+.searched{
+    height: 70vh;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    border-top: 5px solid blueviolet;
+    background-image: url("images/dog-api-fb.jpg")
+}
+.searcheddata{
+    width: 35%;
+    background-color: rgb(117, 117, 186);
+    font-size: 20px;
+}
+.searcheddata h3{
+    margin: 0px;
+}
+.searcheddata h5{
+    margin: 0px;
+}
+
+@media screen and (max-width:805px){
+    #main div{
+        width: 40%;
+        height: 25vh;
+    }
+    #main{
+        height: 105vh;
+    }
+}
+@media screen and (max-width:520px){
+    #main div{
+        height: 40vh;
+    }
+    #main{
+        height: 150vh;
+    }
+}
+@media screen and (max-width:435px){
+    #main div{
+        width: 70%;
+        height: 30vh;
+    }
+    #main{
+        height: 225vh;
+    }
+}
