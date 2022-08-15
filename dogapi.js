@@ -11,11 +11,11 @@ showData(data);
 const showData = (data) => { 
    for (var a=0;a<6;a++){
     let main = document.getElementById("main");
-    let text = document.createElement("div");
-    main.appendChild(text);
+    let addtag = document.createElement("div");
+    main.appendChild(addtag);
     target = document.getElementById("main").children;
-        data1 = `<b>Name</b> : ${data[a].name}<br><b>Origin :</b> ${data[a].origin}<br><b>Breed Group :</b> ${data[a].breed_group}<br><b>Life Span :</b> ${data[a].life_span}`;
-        target[a].innerHTML = data1;
+    const data1 = `<b>Name</b> : ${data[a].name}<br><b>Origin :</b> ${data[a].origin}<br><b>Breed Group :</b> ${data[a].breed_group}<br><b>Life Span :</b> ${data[a].life_span}`;
+    target[a].innerHTML = data1;
     }
 }
 // get input bar inner html 
@@ -24,17 +24,16 @@ const showData = (data) => {
 // get searched get element by id
 // loop
 searchbar=()=>{
-    var search = document.getElementById("input").value;   
-    fetch(`https://api.thedogapi.com/v1/breeds/search?q=${search}`).then((result)=> result.json()).then((results)=>{
+    let searchbar = document.getElementById("input").value;   
+    fetch(`https://api.thedogapi.com/v1/breeds/search?q=${searchbar}`).then((result)=> result.json()).then((results)=>{
         displayData(results);
     }).catch("Error");
-    const displayData=(data)=>{
+        const displayData=(data)=>{
         let searched = document.getElementById("searched");
         tagadd = document.createElement("div");
         searched.appendChild(tagadd);
         let target = document.getElementById("searched").children;
         target[0].classList.add("searcheddata");
-        console.log(target[0]);
         const finalData = `<h3>${data[0].breed_group}</h3><b>Name :</b> ${data[0].name}<br>
         <b>Bred for :</b> ${data[0].bred_for}<br><b>Country Code :</b> ${data[0].country_code}<br><b>Life Span :</b> ${data[0].life_span}<br>
         <b>Origin :</b> ${data[0].origin}<br><b>Refrence image :</b> ${data[0].reference_image_id}<br><b>Temperament :</b> ${data[0].temperament}
